@@ -381,7 +381,7 @@ int main()
         }
     }
     // Wait 10 miliseconds to ensure SD card communication complete
-    Thread::wait(10);
+    Thread::wait(1000);
     
     // Start LCD & BlueTooth Thread
     Thread thread1(LCDThread);
@@ -404,7 +404,7 @@ int main()
             uLCD.printf("file open error!");
         }
         // Wait 10 miliseconds to ensure file properly loaded
-        Thread::wait(10);
+        Thread::wait(1000);
         // Play file; stop/play feature built into waver library
         waver.play(wave_file);
         // Close file
